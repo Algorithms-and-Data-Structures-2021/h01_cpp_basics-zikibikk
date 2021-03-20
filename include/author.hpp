@@ -34,7 +34,10 @@ struct Author {
 
   // === необходимо для тестов ===
   Author() = default;
-  virtual ~Author() = default;
+
+    Author(const std::string &fullName);
+
+    virtual ~Author() = default;
   friend bool operator==(const Author &lhs, const Author &rhs);
   friend bool operator!=(const Author &lhs, const Author &rhs);
 
