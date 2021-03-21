@@ -24,13 +24,30 @@ Book::Book(const std::string &title,
   }
 
   // Tip 1: остались слезы на щеках, осталось лишь инициализировать поля ...
+  this->content_ = content;
+  this->authors_ = authors;
+  this->genre_ = genre;
+  this->publisher_ = publisher;
+  this->title_ = title;
+
 }
 
 // 2. реализуйте метод ...
 bool Book::AddAuthor(const Author &author) {
   // здесь мог бы быть ваш сногсшибающий код ...
   // Tip 1: для поиска дубликатов можно использовать цикл for-each
-  return false;
+  bool arrayContains = false;
+    for (Author a : authors_) {
+        if (author == a){
+            arrayContains = true;
+            break;
+        }
+    }
+
+    if(!arrayContains)
+        authors_.push_back(author);
+
+  return !arrayContains;
 }
 
 // РЕАЛИЗОВАНО
