@@ -13,10 +13,9 @@ Author::Author(const std::string &full_name, int age, Sex sex) {
     throw std::invalid_argument("Author::full_name must not be empty");
   }
   // Tip 1: инициализируйте
-
-  this->full_name_= full_name;
-  this->age_= age;
-  this->sex_= sex;
+  SetFullName(full_name);
+  SetAge(age);
+  SetSex(sex);
 }
 
 void Author::SetAge(int age) {

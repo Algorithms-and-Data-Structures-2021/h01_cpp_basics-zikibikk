@@ -12,5 +12,8 @@
 
 
 int main(int argc, char **argv) {
+
+    Author *author = new Author("Benj", 18, Sex::MALE);
+
   return 0;
 }

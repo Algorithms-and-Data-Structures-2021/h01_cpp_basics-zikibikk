@@ -41,7 +41,7 @@ BookStore::~BookStore() {
   // Tip 1: я свободен ..., словно память в куче: не забудьте обнулить указатель
   this->storage_ = nullptr;
 }
-
+//
 // 4. реализуйте метод ...
 void BookStore::AddBook(const Book &book) {
   if (storage_size_ == storage_capacity_) {
