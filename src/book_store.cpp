@@ -15,11 +15,15 @@ ResizeStorageStatus resize_storage(Book *&storage, int size, int new_capacity) {
       return ResizeStorageStatus ::NEGATIVE_SIZE;
   // Tip 2: не забудьте высвободить ранее выделенную память под хранилище
 
-  Book *newStorage = new Book[new_capacity];
+  Book *newStorage = storage;
+  storage = new Book[new_capacity];
+    std::copy(newStorage,newStorage+size,storage);
+
+          /*new Book[new_capacity];
   std::copy(storage,storage+size,newStorage);
   storage = newStorage;
 
-  newStorage = nullptr;
+  newStorage = nullptr;*/
   delete[](newStorage);
 
 
