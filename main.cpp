@@ -14,7 +14,6 @@
 int main(int argc, char **argv) {
 
     BookStore *bookStore = new BookStore();
-    bookStore.
 
   return 0;
 }
