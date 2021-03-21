@@ -13,7 +13,8 @@
 
 int main(int argc, char **argv) {
 
-    Author *author = new Author("", 18, Sex::MALE);
+    BookStore *bookStore = new BookStore();
+    bookStore.
 
   return 0;
 }
